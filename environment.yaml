@@ -1,0 +1,38 @@
+name: dags
+
+channels:
+  - pytorch
+  - conda-forge
+  - defaults
+
+dependencies:
+  - python=3.8.20
+  - pip=25.0.1
+  - pip:
+      - --extra-index-url https://download.pytorch.org/whl/cu118
+      - torch==2.0.1+cu118
+      - torchvision==0.15.2+cu118
+      - torchaudio==2.0.2+cu118
+
+      - numpy==1.24.4
+      - scipy==1.10.1
+      - matplotlib==3.7.5
+      - pandas==2.0.3
+      - seaborn==0.13.2
+      - plyfile==1.0.3
+      - tqdm==4.69.0
+      - pyyaml==6.0.3
+      - pillow==10.4.0
+
+      - ultralytics==8.4.100
+      - opencv-python==4.8.1.78
+      - lpips==0.1.4
+      - thop==0.1.1-2209072238
+
+      - tensorboard==2.14.0
+
+      - cmake==3.25.0
+
+      - ./submodules/diff-gaussian-rasterization
+      - ./submodules/simple-knn
+      - ./submodules/fused-ssim
